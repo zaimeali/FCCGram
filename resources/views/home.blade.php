@@ -35,6 +35,29 @@
             </div>
         </div>
     </div>
+    <div class="row pt-5">
+        <div class="col-4">
+            <img 
+                class="w-100"
+                src="https://instagram.fkhi10-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.12.775.775a/s640x640/117904071_586448102051174_5646477369680450633_n.jpg?_nc_ht=instagram.fkhi10-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=x7JJ5dVeg_EAX-CXdbi&oh=6ca5f05415165372115c9a49800a30e1&oe=5F67599B" 
+                alt="first image"
+            >
+        </div>
+        <div class="col-4">
+            <img 
+                class="w-100"
+                src="https://instagram.fkhi10-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c1.0.748.748a/s640x640/117532617_329372988207182_2163166929089500044_n.jpg?_nc_ht=instagram.fkhi10-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=TEbl_-igKNAAX-jWRtZ&oh=2a243800554e2ca424d4647c993c1711&oe=5F692F80" 
+                alt="second image"
+            >
+        </div>
+        <div class="col-4">
+            <img 
+                class="w-100"
+                src="https://instagram.fkhi10-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c3.0.744.744a/s640x640/117185734_730508550844355_4827964239716308767_n.jpg?_nc_ht=instagram.fkhi10-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=sWeX6YdA6zkAX84MJAF&oh=92d99f9f00d8004266422b44ffaa6ecf&oe=5F668C4E" 
+                alt="third image"
+            >
+        </div>
+    </div>
     {{-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
