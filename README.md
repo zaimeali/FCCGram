@@ -18,3 +18,7 @@
     - there's no username field because we haven't migrate it.
 10) php artisan migrate:fresh   
     - it will drop all the table but make changes which is add or remove fields.
+11) now go to app.blade.php and change name to username
+12) php artisan make:controller ProfilesController
+13) type index function and return home view
+14) go to routes and change the route from HomeController to ProfilesController
