@@ -22,3 +22,6 @@
 12) php artisan make:controller ProfilesController
 13) type index function and return home view
 14) go to routes and change the route from HomeController to ProfilesController
+15) Now create a new get route of profile and pass user through url and then pass name('profile.show') with a get function.
+16) now in ProfilesController pass $user arg in a index function
+17) do dd() and pass arg in dd function and then go to url and check is it catching the user or not by passing user with any number or name in URL.
