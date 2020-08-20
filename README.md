@@ -9,3 +9,6 @@
 3) now make folder in public with svg and add svg file
 4) now go to app.blade.php and then change the app name and include svg there.
 5) after every change in css or js we should run: npm run dev
+6) add username field in the register.blade.php
+7) then add username in validator and create function in the controllers/RegisterController.php
+8) then go to database then migration then create_users_table, here i will add the username field which will be unique.
