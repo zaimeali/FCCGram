@@ -53,3 +53,4 @@
     - $user = User::find(1)
     - $user->profile->url = 'google.com'
     - $user->push()
+28) php artisan make:model Post -m
