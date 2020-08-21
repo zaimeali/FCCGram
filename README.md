@@ -49,3 +49,7 @@
     - $profile->user      // will show the user data through user_id bcz of the relationship
     - $user = \App\User::find(1)   // it will fetch the user who has a id 1
     - $user->profile      // will show the user profile through 1-to-1 relationship
+27) Now adding url to the user by going into tinker again
+    - $user = User::find(1)
+    - $user->profile->url = 'google.com'
+    - $user->push()
