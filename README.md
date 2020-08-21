@@ -32,3 +32,20 @@
     - a behind the scenes to fetch queries.
 21) php artisan make:model Profile -m
     - it will create the model and migration files of Profile.
+22) define columns in Profile migration
+    - then we can migrate
+23) php artisan migrate
+24) Define relationship in User and Profile models
+    - in Profile model create a user function and use belongsTo method and pass User::class
+    - in User model create a profile function and use hasOne method and pass Profile::class
+25) manually adding data through php artisan tinker
+    - adding data in profile table
+26) Commands in tinker
+    - $profile = new \App\Profile()
+    - $profile->title = 'Cool Title'
+    - $profile->description = 'Description'
+    - $profile->user_id = 1
+    - $profile->save()    // this will save the data
+    - $profile->user      // will show the user data through user_id bcz of the relationship
+    - $user = \App\User::find(1)   // it will fetch the user who has a id 1
+    - $user->profile      // will show the user profile through 1-to-1 relationship

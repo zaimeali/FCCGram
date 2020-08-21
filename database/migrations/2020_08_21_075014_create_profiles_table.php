@@ -13,9 +13,16 @@ class CreateProfilesTable extends Migration
      */
     public function up()
     {
+        // here we should have one to one relationship with a user table.
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');  // foreign key of user table
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
+            $table->string('url')->nullable();
             $table->timestamps();
+
+            $table->index('user_id'); // index for any foreign key you added.
         });
     }
 
