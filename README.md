@@ -62,3 +62,8 @@
 32) php artisan make:controller PostsController
 33) write create function and return view to the posts folder into the form
 34) make folder of a posts and create view in it
+35) after making a form in posts/create.blade.php
+36) go to routes and define the route where the form will go
+37) add csrf directive inside a form
+    - it will add token
+38) add validation in a PostsController Store method with validate function

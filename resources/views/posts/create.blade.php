@@ -3,6 +3,10 @@
 @section('content')
     <div class="container">
         <form method="POST" action="/p" enctype="multipart/form-data">
+
+            {{-- CSRF Directive --}}
+            @csrf
+
             <div class="row">
                 <div class="col-8 offset-2">
                     <div class="row py-3">
@@ -32,6 +36,7 @@
                             </span>
                         @enderror
                     </div>
+
                     <div class="form-group row">
                         <label 
                             for="image" 
@@ -51,6 +56,7 @@
                             </span>
                         @enderror
                     </div>
+                    
                     <div class="form-group row pt-3">
                         <button class="btn btn-primary">
                             Add New Post
