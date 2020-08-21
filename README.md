@@ -25,4 +25,10 @@
 15) Now create a new get route of profile and pass user through url and then pass name('profile.show') with a get function.
 16) now in ProfilesController pass $user arg in a index function
 17) do dd() and pass arg in dd function and then go to url and check is it catching the user or not by passing user with any number or name in URL.
-18) model represents table in a database and one object of a model represents an actual row in a db
+18) now save the user data into variable and pass it to view by returning an array into the return statement.
+19) model represents table in a database and one object of a model represents an actual row in a db.
+20) now we will create a profile model.
+    - Eloquent : is what a laravel calls a database layer of the framework
+    - a behind the scenes to fetch queries.
+21) php artisan make:model Profile -m
+    - it will create the model and migration files of Profile.
