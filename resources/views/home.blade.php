@@ -25,13 +25,12 @@
                     <strong>212</strong> following
                 </div>
             </div>
-            <div class="pt-3 font-weight-bold">freeCodeCamp.org</div>
+            <div class="pt-3 font-weight-bold">{{ $user->profile->title }}</div>
             <div class="text-secondary" style="font-size: 16px;">
-                We're a global community of millions of people learning to code together. 
-                We're an open source, donor-supported, 501(c)(3) nonprofit.
+                {{ $user->profile->description }}
             </div>
             <div class="pt-2">
-                <a style="font-size: 16px;" class="text-info" href="#" target="_blank">https://freecodecamp.org</a>
+                <a style="font-size: 16px;" class="text-info" href="#" target="_blank">{{ $user->profile->url }}</a>
             </div>
         </div>
     </div>
