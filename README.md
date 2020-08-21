@@ -25,3 +25,4 @@
 15) Now create a new get route of profile and pass user through url and then pass name('profile.show') with a get function.
 16) now in ProfilesController pass $user arg in a index function
 17) do dd() and pass arg in dd function and then go to url and check is it catching the user or not by passing user with any number or name in URL.
+18) model represents table in a database and one object of a model represents an actual row in a db
