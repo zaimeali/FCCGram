@@ -37,6 +37,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // has many to many relationship
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
     public function profile()
     {
         // relationship from the both sides and it will fetch the user profile
