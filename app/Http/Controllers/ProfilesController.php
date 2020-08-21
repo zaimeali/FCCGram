@@ -18,7 +18,7 @@ class ProfilesController extends Controller
         // if i pass 1 it will retrieve the data but when i pass any other number which is not stored
         //      it will show me the error.
         // dd(User::find($user));
-        return view('home', [
+        return view('profiles.index', [
             'user' => $user,
         ]);
     }
