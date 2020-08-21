@@ -54,3 +54,5 @@
     - $user->profile->url = 'google.com'
     - $user->push()
 28) php artisan make:model Post -m
+29) after defining fields in a Post Table
+    - Migrate the table
