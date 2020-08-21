@@ -56,3 +56,7 @@
 28) php artisan make:model Post -m
 29) after defining fields in a Post Table
     - Migrate the table
+30) Add button in a view
+31) Add new route for creating a post and redirect it to the controller
+    - Route::get('/p', 'PostsController@create')
+32 php artisan make:controller PostsController
