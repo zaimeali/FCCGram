@@ -59,4 +59,6 @@
 30) Add button in a view
 31) Add new route for creating a post and redirect it to the controller
     - Route::get('/p', 'PostsController@create')
-32 php artisan make:controller PostsController
+32) php artisan make:controller PostsController
+33) write create function and return view to the posts folder into the form
+34) make folder of a posts and create view in it
