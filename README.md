@@ -103,3 +103,7 @@
 53) create show.blade.php file in posts folder
 54) create a route for a picture when user click it will show the picture
 55) create show function in a PostsController to return the view to the show.blade.php
+56) then create edit.blade.php view in profiles folder
+57) then create route with user id for edit
+58) add button in a index.blade.php of edit profile
+59) add edit method in ProfilesController and return the view to edit.blade.php
