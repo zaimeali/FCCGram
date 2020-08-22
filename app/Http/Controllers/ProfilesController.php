@@ -26,12 +26,17 @@ class ProfilesController extends Controller
     // we dont have to use \App\User just use User bcz we are importing it in above
     public function edit(User $user)
     {
+        // authorizing through policy
+        $this->authorize('update', $user->profile);
         // use findOrFail method or directly use \App\User in a arg
         return view('profiles.edit', compact('user'));
     }
 
     public function update(User $user)
     {
+        // authorizing through policy
+        $this->authorize('update', $user->profile);
+        
         $data = request()->validate([
             'title'       => 'required',
             'description' => 'required',
