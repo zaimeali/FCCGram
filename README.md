@@ -110,3 +110,8 @@
 60) add patch method in ProfilesController for updating user profile
 61) use patch directive in edit.blade.php
 62) make a route for updating user profile
+63) but there's an issue in it
+    - if a guest user write any id in a url with edit the guest user can edit any user.
+    - so adding auth method in a user so the guest user cannot edit any other user.
+64) now we will make policy
+    - php artisan make:policy ProfilePolicy -m  Profile  // m for a model
