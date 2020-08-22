@@ -87,3 +87,8 @@
     - now file can be view after creating and passing it to dd function it will  return the path
     - so http://127.0.0.1:8000/storage/uploads/Y7kxkrXswVxluycHJ9zJyPoxv85qERJoE4ycCvOx.jpeg
 46) now we have to store image path
+47) now go to index.blade.php and show the posts in a profile
+48) if you want to delete all posts
+    - go to tinker
+    - Post::truncate()
+49) add link to add new post href
