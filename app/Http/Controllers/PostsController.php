@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class PostsController extends Controller
 {
@@ -32,6 +33,9 @@ class PostsController extends Controller
         // public is a driver
         $imagePath = request('image')->store('uploads', 'public');  // go to storage/app/public/uploads you will find image here
         
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
+        $image->save();
+
         // dd(request('image')->store('uploads', 'public'));
         //  now you can view file through url
         // http://127.0.0.1:8000/storage/uploads/Y7kxkrXswVxluycHJ9zJyPoxv85qERJoE4ycCvOx.jpeg
