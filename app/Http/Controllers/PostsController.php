@@ -52,4 +52,9 @@ class PostsController extends Controller
         return redirect('/profile/'. auth()->user()->id);
         // now here we are redirecting the user to its profile with the user id from the auth function
     }
+
+    public function show(\App\Post $post)
+    {   
+        return view('posts.show', compact('post'));
+    }
 }
