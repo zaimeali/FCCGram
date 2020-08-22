@@ -73,3 +73,8 @@
     - php artisan tinker
     - Post::all()
     - it will show all the post of the user but first when you're creating the post you've to logged in.
+42) now we will create the auth middleware in a PostsController so that guest user which is not logged in will not go to create page directly.
+43) this->middleware('auth') will stop the user to go to any post create page
+    - now log out
+    - go to p/create page
+    - it will redirect you to the login page directly bcz you are not logged in
