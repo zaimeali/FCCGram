@@ -115,3 +115,5 @@
     - so adding auth method in a user so the guest user cannot edit any other user.
 64) now we will make policy
     - php artisan make:policy ProfilePolicy -m  Profile  // m for a model
+65) in policy go to update function return true or false based on condition
+66) use @can directive and pass $user->profile in a 2nd arg
