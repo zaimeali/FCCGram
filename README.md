@@ -107,3 +107,6 @@
 57) then create route with user id for edit
 58) add button in a index.blade.php of edit profile
 59) add edit method in ProfilesController and return the view to edit.blade.php
+60) add patch method in ProfilesController for updating user profile
+61) use patch directive in edit.blade.php
+62) make a route for updating user profile
