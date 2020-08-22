@@ -17,7 +17,7 @@
             </div>
             <div class="d-flex">
                 <div class="pr-5">
-                    <strong>153</strong> posts
+                    <strong>{{ $user->posts->count() }}</strong> posts
                 </div>
                 <div class="pr-5">
                     <strong>23k</strong> followers
@@ -37,7 +37,7 @@
     </div>
     <div class="row pt-5">
         @foreach ($user->posts as $post)
-            <div class="col-4">
+            <div class="col-4 pb-4">
                 <img 
                     class="w-100"
                     src="/storage/{{ $post->image }}" 
