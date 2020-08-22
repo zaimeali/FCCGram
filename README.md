@@ -98,3 +98,5 @@
     - after hasMany()->orderby('created_at', 'DESC')
 51) will retrieve posts count
     - $user->posts->count()
+52) now we will add new package for image resizing
+    - composer require intervention/image
