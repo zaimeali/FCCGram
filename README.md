@@ -78,3 +78,12 @@
     - now log out
     - go to p/create page
     - it will redirect you to the login page directly bcz you are not logged in
+44) to save image in a storage/app/public/uploads folder
+    - we have to define the path in a store function in a PostsController
+45) to view the file through url we have to run this command once 
+    - so it will link the storage folder
+    - php artisan storage:link
+    - run it only once
+    - now file can be view after creating and passing it to dd function it will  return the path
+    - so http://127.0.0.1:8000/storage/uploads/Y7kxkrXswVxluycHJ9zJyPoxv85qERJoE4ycCvOx.jpeg
+46) now we have to store image path

@@ -27,9 +27,25 @@ class PostsController extends Controller
             'image'   => ['required', 'image'],
         ]);
 
-        // laravel in a bts will add the user id for us bcz of posts function which is in a User model
-        auth()->user()->posts()->create($data);
+        // path for image store and driver which is a second arg
+        // uploads is a dir
+        // public is a driver
+        $imagePath = request('image')->store('uploads', 'public');  // go to storage/app/public/uploads you will find image here
         
-        dd(request()->all());
+        // dd(request('image')->store('uploads', 'public'));
+        //  now you can view file through url
+        // http://127.0.0.1:8000/storage/uploads/Y7kxkrXswVxluycHJ9zJyPoxv85qERJoE4ycCvOx.jpeg
+
+        // laravel in a bts will add the user id for us bcz of posts function which is in a User model
+        // auth()->user()->posts()->create($data);
+        $arg = [
+            'caption' => $data['caption'],
+            'image'   => $imagePath,
+        ];
+        auth()->user()->posts()->create($arg);
+        
+        // dd(request()->all());
+        return redirect('/profile/'. auth()->user()->id);
+        // now here we are redirecting the user to its profile with the user id from the auth function
     }
 }
