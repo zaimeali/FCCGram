@@ -67,3 +67,9 @@
 37) add csrf directive inside a form
     - it will add token
 38) add validation in a PostsController Store method with validate function
+39) override guarded feature in Post model file
+40) then call auth function with user function with post function which is in UserModel to create new post
+41) now go to tinker
+    - php artisan tinker
+    - Post::all()
+    - it will show all the post of the user but first when you're creating the post you've to logged in.

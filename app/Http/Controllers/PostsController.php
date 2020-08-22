@@ -18,6 +18,10 @@ class PostsController extends Controller
             // 'image'   => 'required|image' // another way
             'image'   => ['required', 'image'],
         ]);
+
+        // laravel in a bts will add the user id for us bcz of posts function which is in a User model
+        auth()->user()->posts()->create($data);
+        
         dd(request()->all());
     }
 }
