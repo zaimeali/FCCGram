@@ -22,4 +22,11 @@ class ProfilesController extends Controller
             'user' => $user,
         ]);
     }
+
+    // we dont have to use \App\User just use User bcz we are importing it in above
+    public function edit(User $user)
+    {
+        // use findOrFail method or directly use \App\User in a arg
+        return view('profiles.edit', compact('user'));
+    }
 }

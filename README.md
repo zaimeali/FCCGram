@@ -100,3 +100,6 @@
     - $user->posts->count()
 52) now we will add new package for image resizing
     - composer require intervention/image
+53) create show.blade.php file in posts folder
+54) create a route for a picture when user click it will show the picture
+55) create show function in a PostsController to return the view to the show.blade.php
