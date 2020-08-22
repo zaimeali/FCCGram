@@ -92,3 +92,7 @@
     - go to tinker
     - Post::truncate()
 49) add link to add new post href
+50) currently it displaying post in ascending order
+    - we have to go to User model
+    - then post function 
+    - after hasMany()->orderby('created_at', 'DESC')
