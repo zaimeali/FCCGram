@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-3 p-5">
             <img 
-                @if ($user->profile->image)
+                @if ( $user->profile->image )
                     src="/storage/{{ $user->profile->image }}"
                 @else
                     src="https://instagram.fkhi10-1.fna.fbcdn.net/v/t51.2885-19/s150x150/97566921_2973768799380412_5562195854791540736_n.jpg?_nc_ht=instagram.fkhi10-1.fna.fbcdn.net&_nc_ohc=Flk2TOzsvZQAX_JLLW3&oh=818a56cbff85844ebed01cdfd30dd9f7&oe=5F667267"
@@ -19,7 +19,10 @@
                 <div class="d-flex align-items-center pb-3">
                     <div class="h4">{{ $user->username }}</div>
 
-                    <follow-button user-id="{{ $user->id }}"></follow-button>
+                    <follow-button 
+                        user-id="{{ $user->id }}"
+                        follows={{ $follows }}
+                    ></follow-button>
                 </div>
 
                 @can('update', $user->profile)
