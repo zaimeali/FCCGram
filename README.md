@@ -124,3 +124,4 @@
 after so long
 1) composer require laravel/telescope
 2) php artisan telescope:install
+3) php artisan migrate
