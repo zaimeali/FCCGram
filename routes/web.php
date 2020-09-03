@@ -21,6 +21,8 @@ Auth::routes();
 
 // Route::get('/home', 'ProfilesController@index')->name('home');
 
+Route::post('follow/{user}', 'FollowsController@store');
+
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
 Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.update');
@@ -28,3 +30,6 @@ Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.upda
 Route::get('/p/create', 'PostsController@create');
 Route::post('/p', 'PostsController@store');
 Route::get('/p/{post}', 'PostsController@show');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

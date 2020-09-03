@@ -9,6 +9,10 @@ class Profile extends Model
 
     protected $guarded = [];
 
+    public function followers() {
+        return $this->belongsToMany(User::class);
+    }
+
     public function user()
     {
         // it will create the relationship and will fetch the user_id
