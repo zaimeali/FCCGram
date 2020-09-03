@@ -1936,7 +1936,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.status = !_this.status;
         console.log(res.data);
       })["catch"](function (err) {
-        if (err.data.status == 401) {
+        if (err.response.status == 401) {
           window.location = '/login';
         }
       });

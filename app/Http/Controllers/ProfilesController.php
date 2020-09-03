@@ -10,7 +10,7 @@ class ProfilesController extends Controller
 {
     public function index(User $user) 
     {
-        $follows = (auth()->user()) ? auth()->user()->following->contains($user) : false;
+        $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
         // dd($user);
 
         // dd($follows);

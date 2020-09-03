@@ -117,3 +117,10 @@
     - php artisan make:policy ProfilePolicy -m  Profile  // m for a model
 65) in policy go to update function return true or false based on condition
 66) use @can directive and pass $user->profile in a 2nd arg
+
+
+
+
+after so long
+1) composer require laravel/telescope
+2) php artisan telescope:install
