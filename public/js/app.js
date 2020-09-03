@@ -1935,6 +1935,10 @@ __webpack_require__.r(__webpack_exports__);
       axios.post("/follow/".concat(this.userId)).then(function (res) {
         _this.status = !_this.status;
         console.log(res.data);
+      })["catch"](function (err) {
+        if (err.data.status == 401) {
+          window.location = '/login';
+        }
       });
     }
   },
