@@ -6,6 +6,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NewUserWelcomeMail;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -47,7 +50,7 @@ class User extends Authenticatable
             ]);
 
             // for email
-            
+            Mail::to($user->email)->send(new NewUserWelcomeMail( ));
 
         }); // this created event will get call when the new user is created
     }

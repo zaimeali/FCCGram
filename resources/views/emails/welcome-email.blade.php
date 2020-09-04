@@ -1,12 +1,13 @@
 @component('mail::message')
-# Introduction
+# Welcome to FCCGram
 
-The body of your message.
-
+This is a community of developers
+{{-- 
 @component('mail::button', ['url' => ''])
 Button Text
-@endcomponent
+@endcomponent --}}
 
-Thanks,<br>
-{{ config('app.name') }}
+All the best,<br>
+{{-- {{ config('app.name') }} --}}
+Zaime
 @endcomponent
