@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
+
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -13,6 +15,16 @@ class PostsController extends Controller
         // passing the auth key in a middleware
         $this->middleware('auth');
         // after creating this every other function of postscontroller will require logged in user
+    }
+
+    public function index()
+    {
+        // to get all user id will use user id in profiles table
+        $users = auth()->user()->following()->pluck('profiles.user_id');
+        // $posts = Post::whereIn('user_id', $users)->orderBy('created_at', 'DESC')->get();
+        $posts = Post::whereIn('user_id', $users)->latest()->get();
+        // dd($posts);
+        return view('posts.index', compact('posts'));
     }
 
     public function create()
