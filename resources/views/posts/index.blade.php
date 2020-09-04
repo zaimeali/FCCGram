@@ -4,12 +4,16 @@
     <div class="container">
         @foreach ($posts as $post)
         <div class="row">
-            <div class="col-8">
-                <img class="w-100" src="/storage/{{ $post->image }}" alt="{{ $post->caption }}">
+            <div class="col-6 offset-3">
+                <a href="/profile/{{ $post->user->id }}">
+                    <img class="w-100" src="/storage/{{ $post->image }}" alt="{{ $post->caption }}">
+                </a>
             </div>
-            <div class="col-4">
+        </div>
+        <div class="row pt-2 pb-4">
+            <div class="col-6 offset-3">
                 <div class="">
-                    <div class="d-flex align-items-center">
+                    {{-- <div class="d-flex align-items-center">
                         <div class="pr-3">
                             <img 
                                 style="max-width: 50px;" 
@@ -33,9 +37,9 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
-                    <hr>
+                    {{-- <hr> --}}
 
                     <p>
                         <span class="font-weight-bold">
@@ -48,5 +52,11 @@
             </div>
         </div>
         @endforeach
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                {{ $posts->links() }}
+            </div>
+        </div>
     </div>
 @endsection

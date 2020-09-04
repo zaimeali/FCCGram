@@ -22,7 +22,11 @@ class PostsController extends Controller
         // to get all user id will use user id in profiles table
         $users = auth()->user()->following()->pluck('profiles.user_id');
         // $posts = Post::whereIn('user_id', $users)->orderBy('created_at', 'DESC')->get();
-        $posts = Post::whereIn('user_id', $users)->latest()->get();
+        // $posts = Post::whereIn('user_id', $users)->latest()->get();
+        // $posts = Post::whereIn('user_id', $users)->latest()->paginate(5); // will retrieve 5 posts per page
+        
+        // this will solve N+1 problem so it will not load the image limit 1 at a time  
+        $posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(5); // with() will use for relationship 
         // dd($posts);
         return view('posts.index', compact('posts'));
     }

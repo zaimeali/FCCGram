@@ -5,21 +5,45 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Cache;
 
 class ProfilesController extends Controller
 {
     public function index(User $user) 
     {
+
         $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
         // dd($user);
 
         // dd($follows);
+
+        $postsCount = Cache::remember(
+            'count.posts.'. $user->id, 
+            now()->addSeconds(30), 
+            function () use ($user) {
+                return $user->posts->count();
+            });
+        $followersCount = Cache::remember(
+            'count.followers.' . $user->id, 
+            now()->addSeconds(30), 
+            function () use ($user) {
+                return $user->profile->followers->count();
+            });
+        $followingsCount = Cache::remember(
+            'count.followings.', 
+            now()->addSeconds(30), 
+            function () use ($user) {
+                return $user->following->count();
+            });
         
         // $user = User::find($user); // if user enter any other id which is not available in a db this will break the app
         // $user = User::findOrFail($user);  // if it will fail then it will redirect user to 404 page
         return view('profiles.index', [
             'user' => $user,
             'follows' => $follows, 
+            'postsCount' => $postsCount,
+            'followersCount' => $followersCount,
+            'followingsCount' => $followingsCount,
         ]);
 
         // if i pass 1 it will retrieve the data but when i pass any other number which is not stored
