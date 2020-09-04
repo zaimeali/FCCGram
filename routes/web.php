@@ -19,6 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PostsController@index');
 
+use App\Mail\NewUserWelcomeMail;
+Route::get('/email', function () {
+    return new NewUserWelcomeMail();
+});
+
 Auth::routes();
 
 // Route::get('/home', 'ProfilesController@index')->name('home');

@@ -125,3 +125,7 @@ after so long
 1) composer require laravel/telescope
 2) php artisan telescope:install
 3) php artisan migrate
+
+1) mailtrap
+2) .env edit smtp
+3) php artisan make:mail NewUserWelcomeMail -m emails.welcome-email  // it'll create one mail class file and one view file

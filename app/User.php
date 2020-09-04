@@ -45,6 +45,10 @@ class User extends Authenticatable
             $user->profile()->create([
                 'title' => $user->username,
             ]);
+
+            // for email
+            
+
         }); // this created event will get call when the new user is created
     }
 
